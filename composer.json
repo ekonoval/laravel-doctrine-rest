@@ -24,15 +24,21 @@
             "Pz\\LaravelDoctrine\\Rest\\Tests\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ekonoval/doctrine-rest"
+        }
+    ],
     "require-dev": {
-        "laravel-doctrine/orm": "^1.8",
-        "laravel-doctrine/acl": "^1.6",
+        "laravel-doctrine/orm": "^2.0.1",
+        "laravel-doctrine/acl": "^1.7.1",
         "laravel-doctrine/migrations": "^3.1",
-        "laravel/laravel": "^9.0",
+        "laravel/laravel": "^v10.3",
         "phpunit/phpunit": "^9.5"
     },
     "require": {
         "php": "^8.1",
-        "pz/doctrine-rest": "^0.3"
+        "pz/doctrine-rest": "dev-master"
     }
 }
