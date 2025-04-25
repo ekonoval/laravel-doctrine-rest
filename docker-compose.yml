@@ -1,4 +1,3 @@
-version: "3.3"
 services:
   php:
     build:
@@ -6,5 +5,5 @@ services:
       dockerfile: Dockerfile
     volumes:
       - .:/opt/project
-    user: '1000'
-    command: ['composer', 'install']
+#    user: '1000'
+    command: ['tail', '-f', '/dev/null']
