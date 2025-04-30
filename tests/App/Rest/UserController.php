@@ -7,6 +7,7 @@ use Pz\Doctrine\Rest\Action\Relationships\RelationshipsCollectionCreateAction;
 use Pz\Doctrine\Rest\Action\Relationships\RelationshipsCollectionDeleteAction;
 use Pz\Doctrine\Rest\Action\Relationships\RelationshipsCollectionUpdateAction;
 use Pz\Doctrine\Rest\RestRepository;
+use Pz\LaravelDoctrine\Rest\Action\UpdateAction;
 use Pz\LaravelDoctrine\Rest\RestController;
 use Pz\LaravelDoctrine\Rest\RestRequest;
 use Pz\LaravelDoctrine\Rest\Tests\App\Entities\Role;
@@ -49,6 +50,11 @@ class UserController extends RestController
         parent::getFilterProperty();
         parent::getFilterable();
         return parent::index($request);
+    }
+
+    public function updateCustom(UpdateRequest $request)
+    {
+        return (new UpdateAction($this->repository(), $this->transformer()))->dispatch($request);
     }
 
     /**

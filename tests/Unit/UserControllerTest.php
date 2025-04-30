@@ -23,7 +23,7 @@ class UserControllerTest extends TestCase
                 Route::get('', UserController::class . '@index');
                 Route::post('', UserController::class . '@create');
                 Route::get('/{id}', UserController::class . '@show');
-                Route::patch('/{id}', UserController::class . '@update');
+                Route::patch('/{id}', UserController::class . '@updateCustom');
                 Route::delete('/{id}', UserController::class . '@delete');
 
                 Route::get('/{id}/roles', UserController::class . '@relatedRoles');
@@ -363,9 +363,9 @@ class UserControllerTest extends TestCase
                     [
                         'code' => 'validation',
                         'source' => [
-                            'pointer' => 'email',
+                            'pointer' => 'data.attributes.email',
                         ],
-                        'detail' => 'Please provide correct email address'
+                        'detail' => 'The data.attributes.email field must be a valid email address.'
                     ],
                 ],
             ]);
