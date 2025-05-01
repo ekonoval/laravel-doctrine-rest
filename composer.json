@@ -32,6 +32,6 @@
     },
     "require": {
         "php": "^8.2",
-        "pz/doctrine-rest": "0.5.0"
+        "pz/doctrine-rest": "^0.5.0"
     }
 }
